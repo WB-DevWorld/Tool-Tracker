@@ -58,14 +58,14 @@ jobs:
           node deploy/scripts/verify-migration-gate.mjs
           node deploy/scripts/verify-checkout-container.mjs
       - name: Scan Web image
-        uses: aquasecurity/trivy-action@57a97c7e7821a5776cebc9bb87c984fa69cba8f1
+        uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25
         with:
           version: v0.76.2
           image-ref: tooltrack-web:verify
           severity: HIGH,CRITICAL
           exit-code: '1'
       - name: Scan API image
-        uses: aquasecurity/trivy-action@57a97c7e7821a5776cebc9bb87c984fa69cba8f1
+        uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25
         with:
           version: v0.76.2
           image-ref: tooltrack-api:verify
